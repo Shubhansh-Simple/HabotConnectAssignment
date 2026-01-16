@@ -9,6 +9,7 @@ djangorestframework-simplejwt = "*"
 pytest = "*"
 pytest-django = "*"
 pytest-factoryboy = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
