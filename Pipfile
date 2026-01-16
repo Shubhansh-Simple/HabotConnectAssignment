@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 django-filter = "*"
 djangorestframework-simplejwt = "*"
+pytest = "*"
+pytest-django = "*"
+pytest-factoryboy = "*"
 
 [dev-packages]
 
