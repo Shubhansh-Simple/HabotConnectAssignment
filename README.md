@@ -6,6 +6,19 @@ This API provides **CRUD (Create, Read, Update, Delete)** functionality for mana
 
 ---
 
+## 🌐 Deployed Application
+
+The application is deployed on **PythonAnywhere** and can be accessed at:
+
+🔗 https://habotconnect.pythonanywhere.com/login/
+
+---
+
+## 🔑 Test Credentials (For Evaluation)
+
+A **staff account is already created** in the deployed application for testing whose credentials given below.
+
+
 ## 🔐 Authentication
 
 ### Obtain JWT Token
@@ -21,7 +34,7 @@ POST /login/
 ```json
 {
   "username": "admin",
-  "password": "adminpassword"
+  "password": "123456"
 }
 ```
 
@@ -226,6 +239,60 @@ DELETE /api/employees/{id}/
 
 The employee is permanently removed from the system.
 
+---
+## 🛠️ Running the Project Locally
+
+### ✅ Prerequisites
+Ensure the following are installed:
+
+- Python **3.10**
+- Pipenv
+- Git
+
+---
+
+1️⃣ Clone the Repository
+
+```
+git clone <repository_url>
+cd employees
+```
+
+2️⃣ Install Dependencies
+```
+  pipenv install
+  pipenv shell
+```
+Dependencies are installed from the Pipfile.
+
+3️⃣ Environment Variables
+  Create a .env file in the project root directory:
+
+```
+  SECRET_KEY=your-secret-key
+  DEBUG=True
+```
+
+4️⃣ Apply Database Migrations
+  python manage.py migrate
+This will create the required tables using SQLite.
+
+5️⃣ Create Superuser (Optional)
+  ```python manage.py createsuperuser```
+Used to access Django Admin locally.
+
+6️⃣ Run Development Server
+  python manage.py runserver
+The API will be available at:
+
+```
+http://127.0.0.1:8000/api/employees/
+```
+
+🧪 Running Tests
+```
+pytest
+```
 ---
 
 ## ✅ Summary
